@@ -89,8 +89,5 @@ public class StandardScheduleService implements IScheduleService {
         return t;
     }
 
-    private void fillTable(String[][] nelements, String[] elements, int idx) {
-
-    }
 }
 
