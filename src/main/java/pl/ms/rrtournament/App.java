@@ -22,8 +22,8 @@ public class App {
         for (int i = 0; i < s.length; i++) {
             s[i] = new String(new char[]{(char) ((int)'a' + i)});
         }
-        Tournament t32 = scheduleService.schedule(s);
-        System.out.println(t32);
+        Tournament t20 = scheduleService.schedule(s);
+        System.out.println(t20);
 
     }
 
