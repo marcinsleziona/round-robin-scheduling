@@ -8,6 +8,8 @@ import pl.ms.rrtournament.model.Tournament;
  */
 public class StandardScheduleService implements IScheduleService {
 
+    private static final String DUMMY = "__dummy__";
+
     /**
      * Scheduling algorithm
      * <p>
@@ -69,7 +71,7 @@ public class StandardScheduleService implements IScheduleService {
         } else {
             nelements = new String[elements.length + 1];
             System.arraycopy(elements, 0, nelements, 0, elements.length);
-            nelements[nelements.length-1] = "__dummy__";
+            nelements[nelements.length-1] = DUMMY;
         }
 
         for (int idx = 0; idx < nelements.length - 1; idx++) {
@@ -85,7 +87,7 @@ public class StandardScheduleService implements IScheduleService {
             nelements[1] = temp;
         }
 
-        t.nullify("__dummy__");
+        t.nullify(DUMMY);
         return t;
     }
 
