@@ -1,6 +1,5 @@
 package pl.ms.rrtournament.model;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 
 import java.util.Arrays;
@@ -19,13 +18,13 @@ public class Round {
     }
 
     public static Round from(String[] nelements) {
-        if(nelements.length % 2 != 0) {
+        if (nelements.length % 2 != 0) {
             throw new IllegalStateException("The size must be an even number !");
         }
 
         Round round = Round.empty();
-        for(int i = 0; i< nelements.length/2; i++) {
-            round.pairMap.put(round.pairMap.size()+1, Pair.from(nelements[i], nelements[nelements.length-1-i]));
+        for (int i = 0; i < nelements.length / 2; i++) {
+            round.pairMap.put(round.pairMap.size() + 1, Pair.from(nelements[i], nelements[nelements.length - 1 - i]));
         }
         return round;
     }
@@ -54,10 +53,6 @@ public class Round {
 
     public boolean isEmpty() {
         return MapUtils.isEmpty(pairMap);
-    }
-
-    public void nullify(String teamName) {
-        pairMap.values().forEach(p->p.nullify(teamName));
     }
 
     @Override

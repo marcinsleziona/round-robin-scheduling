@@ -52,8 +52,4 @@ public class Tournament {
     public String toString() {
         return Arrays.toString(roundMap.entrySet().toArray());
     }
-
-    public void nullify(String teamName) {
-        roundMap.values().forEach(p->p.nullify(teamName));
-    }
 }

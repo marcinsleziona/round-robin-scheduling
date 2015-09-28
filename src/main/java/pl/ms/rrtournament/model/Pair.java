@@ -1,7 +1,5 @@
 package pl.ms.rrtournament.model;
 
-import org.apache.commons.collections.MapUtils;
-
 /**
  * Created by Marcin on 2015-09-18.
  */
@@ -37,17 +35,8 @@ public class Pair {
         return element1 == null && element2 == null;
     }
 
-    public void nullify(String teamName) {
-        if(element1.equals(teamName)) {
-            element1 = null;
-        }
-        if(element2.equals(teamName)) {
-            element2 = null;
-        }
-    }
-
     @Override
     public String toString() {
-        return element1+"-"+element2;
+        return element1 + "-" + element2;
     }
 }
