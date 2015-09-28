@@ -3,10 +3,12 @@ package pl.ms.rrtournament.services;
 import pl.ms.rrtournament.model.Round;
 import pl.ms.rrtournament.model.Tournament;
 
+import java.lang.reflect.Array;
+
 /**
  * Created by Marcin on 2015-09-18.
  */
-public class StandardScheduleService implements IScheduleService {
+public class StandardScheduleService<T> implements IScheduleService<T> {
 
     /**
      * Scheduling algorithm
@@ -52,7 +54,7 @@ public class StandardScheduleService implements IScheduleService {
      * In France this is called the Carousel-Berger system (Système Rutch-Berger).
      */
     @Override
-    public Tournament schedule(String[] elements) {
+    public Tournament schedule(T[] elements) {
         Tournament t = Tournament.empty();
         if (elements == null) {
             return t;
@@ -62,12 +64,15 @@ public class StandardScheduleService implements IScheduleService {
         }
 
         // create new array to compensate odd length
-        String[] nelements;
+        Class<T> class_ = (Class<T>) elements[0].getClass();
+        T[] nelements;
         if (elements.length % 2 == 0) {
-            nelements = new String[elements.length];
+            //nelements = new String[elements.length];
+            nelements = (T[]) Array.newInstance(class_, elements.length);
             System.arraycopy(elements, 0, nelements, 0, elements.length);
         } else {
-            nelements = new String[elements.length + 1];
+            //nelements = new String[elements.length + 1];
+            nelements = (T[]) Array.newInstance(class_, elements.length+1);
             System.arraycopy(elements, 0, nelements, 0, elements.length);
         }
 
@@ -77,7 +82,7 @@ public class StandardScheduleService implements IScheduleService {
             t.addRound(r);
 
             // fill nelements 1,2,3,4,5,6 -> 1,6,2,3,4,5
-            String temp = nelements[nelements.length-1];
+            T temp = nelements[nelements.length-1];
             for (int i = nelements.length-1; i > 1; i--) {
                 nelements[i] = nelements[i - 1];
             }

@@ -3,12 +3,12 @@ package pl.ms.rrtournament.model;
 /**
  * Created by Marcin on 2015-09-18.
  */
-public class Pair {
+public class Pair<T> {
 
-    private String element1;
-    private String element2;
+    private T element1;
+    private T element2;
 
-    public static Pair from(String element1, String element2) {
+    public static <T> Pair from(T element1, T element2) {
         Pair p = new Pair();
         p.element1 = element1;
         p.element2 = element2;
@@ -19,11 +19,11 @@ public class Pair {
         return new Pair();
     }
 
-    public String getElement1() {
+    public T getElement1() {
         return element1;
     }
 
-    public String getElement2() {
+    public T getElement2() {
         return element2;
     }
 

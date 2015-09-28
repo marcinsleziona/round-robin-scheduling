@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by Marcin on 2015-09-18.
  */
-public class Round {
+public class Round<T> {
 
     private Map<Integer, Pair> pairMap;
 
@@ -17,7 +17,7 @@ public class Round {
         pairMap = new LinkedHashMap<>();
     }
 
-    public static Round from(String[] nelements) {
+    public static <T> Round from(T[] nelements) {
         if (nelements.length % 2 != 0) {
             throw new IllegalStateException("The size must be an even number !");
         }
