@@ -11,6 +11,8 @@ import java.lang.reflect.Array;
 public class StandardScheduleService<T> implements IScheduleService<T> {
 
     /**
+     * https://en.wikipedia.org/wiki/Round-robin_tournament
+     *
      * Scheduling algorithm
      * <p>
      * If n is the number of competitors, a pure round robin tournament requires  n/2(n-1) games.

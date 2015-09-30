@@ -12,6 +12,8 @@ import java.util.Arrays;
 public class SpanDiagramScheduleService<T> implements IScheduleService<T> {
 
     /**
+     * https://en.wikipedia.org/wiki/Round-robin_tournament
+     *
      * https://fr.wikipedia.org/wiki/Table_de_Berger,
      *
      * Round Robin Schedule Span Diagram, taken from https://en.wikipedia.org/wiki/Round-robin_tournament#cite_note-17
