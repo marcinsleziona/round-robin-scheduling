@@ -29,6 +29,25 @@ public class Round<T> {
         return round;
     }
 
+    public static <T> Round from(T element, boolean elementHome, T[] nelements) {
+        if (nelements.length % 2 == 0) {
+            throw new IllegalStateException("The size must be an odd number !");
+        }
+
+        Round round = Round.empty();
+        if (elementHome) {
+            round.pairMap.put(1, Pair.from(element, nelements[0]));
+        } else {
+            round.pairMap.put(1, Pair.from(nelements[0], element));
+        }
+
+        // rest 1,   2,3,4,5, 2-5, 3-4
+        for (int i = 1; i <= nelements.length / 2; i++) {
+            round.pairMap.put(round.pairMap.size() + 1, Pair.from(nelements[i], nelements[nelements.length - i]));
+        }
+        return round;
+    }
+
     public static Round empty() {
         return new Round();
     }
