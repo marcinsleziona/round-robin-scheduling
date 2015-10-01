@@ -42,7 +42,7 @@ public class SpanDiagramScheduleService<T> implements IScheduleService<T> {
         }
 
         T centerElement = nelements[nelements.length-1];
-        T[] restnelements = (T[]) Array.newInstance(class_, elements.length-1);
+        T[] restnelements = (T[]) Array.newInstance(class_, nelements.length-1);
         System.arraycopy(nelements, 0, restnelements, 0, nelements.length-1);
 
 

@@ -2,6 +2,7 @@ package pl.ms.rrtournament;
 
 import pl.ms.rrtournament.model.Tournament;
 import pl.ms.rrtournament.services.IScheduleService;
+import pl.ms.rrtournament.services.SpanDiagramScheduleService;
 import pl.ms.rrtournament.services.StandardScheduleService;
 
 /**
@@ -10,7 +11,7 @@ import pl.ms.rrtournament.services.StandardScheduleService;
 public class App {
 
     public static void main(String[] args) {
-        IScheduleService scheduleService = new StandardScheduleService();
+        IScheduleService scheduleService = new SpanDiagramScheduleService<>();
 
         Tournament t4 = scheduleService.schedule(new String[]{"a", "b", "c", "d"});
         System.out.println(t4);
