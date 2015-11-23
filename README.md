@@ -1,4 +1,4 @@
-# rrtournament
+# round-robin-scheduling
 Java application to schedule teams in round-robin (all-play-all) tournament.
 
 There are 2 schedule algorithms implemented:

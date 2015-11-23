@@ -1,4 +1,4 @@
-package pl.ms.rrtournament.model;
+package pl.ms.rrs.model;
 
 import org.apache.commons.collections.MapUtils;
 

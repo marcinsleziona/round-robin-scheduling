@@ -1,10 +1,9 @@
-package pl.ms.rrtournament.services;
+package pl.ms.rrs.services;
 
-import pl.ms.rrtournament.model.Round;
-import pl.ms.rrtournament.model.Tournament;
+import pl.ms.rrs.model.Round;
+import pl.ms.rrs.model.Tournament;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
 
 /**
  * Created by Marcin on 2015-09-18.

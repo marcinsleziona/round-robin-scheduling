@@ -1,13 +1,13 @@
-package pl.ms.rrtournament;
+package pl.ms.rrs;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pl.ms.rrtournament.model.Pair;
-import pl.ms.rrtournament.model.Round;
-import pl.ms.rrtournament.model.Tournament;
-import pl.ms.rrtournament.services.IScheduleService;
-import pl.ms.rrtournament.services.StandardScheduleService;
+import pl.ms.rrs.model.Pair;
+import pl.ms.rrs.model.Round;
+import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.services.IScheduleService;
+import pl.ms.rrs.services.StandardScheduleService;
 
 /**
  * Created by Marcin on 2015-09-18.

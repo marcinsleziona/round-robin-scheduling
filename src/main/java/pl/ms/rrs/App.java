@@ -1,9 +1,8 @@
-package pl.ms.rrtournament;
+package pl.ms.rrs;
 
-import pl.ms.rrtournament.model.Tournament;
-import pl.ms.rrtournament.services.IScheduleService;
-import pl.ms.rrtournament.services.SpanDiagramScheduleService;
-import pl.ms.rrtournament.services.StandardScheduleService;
+import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.services.IScheduleService;
+import pl.ms.rrs.services.SpanDiagramScheduleService;
 
 /**
  * Created by Marcin on 2015-09-24.

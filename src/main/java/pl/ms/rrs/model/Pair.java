@@ -1,4 +1,4 @@
-package pl.ms.rrtournament.model;
+package pl.ms.rrs.model;
 
 /**
  * Created by Marcin on 2015-09-18.
