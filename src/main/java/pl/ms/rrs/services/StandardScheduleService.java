@@ -1,7 +1,7 @@
 package pl.ms.rrs.services;
 
 import pl.ms.rrs.model.Round;
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 
 import java.lang.reflect.Array;
 
@@ -56,8 +56,8 @@ public class StandardScheduleService<T> implements IScheduleService<T> {
      * In France this is called the Carousel-Berger system (Système Rutch-Berger).
      */
     @Override
-    public Tournament schedule(T[] elements) {
-        Tournament t = Tournament.empty();
+    public Fixtures schedule(T[] elements) {
+        Fixtures t = Fixtures.empty();
         if (elements == null) {
             return t;
         }

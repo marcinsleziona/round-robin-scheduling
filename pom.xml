@@ -4,7 +4,7 @@
 
     <groupId>pl.ms.round-robin-scheduling</groupId>
     <artifactId>round-robin-scheduling</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <developers>
         <developer>
@@ -43,7 +43,10 @@
                 <version>1.0-m5.1</version>
                 <configuration>
                     <!-- see goals wiki page for configuration options: https://bitbucket.org/atlassian/jgit-flow/wiki/goals.wiki#!common-parameters -->
+                    <allowUntracked>true</allowUntracked>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <noDeploy>true</noDeploy>
+                    <pushReleases>true</pushReleases>
                 </configuration>
             </plugin>
         </plugins>

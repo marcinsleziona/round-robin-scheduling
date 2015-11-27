@@ -1,6 +1,6 @@
 package pl.ms.rrs;
 
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 import pl.ms.rrs.services.IScheduleService;
 import pl.ms.rrs.services.SpanDiagramScheduleService;
 
@@ -12,17 +12,17 @@ public class App {
     public static void main(String[] args) {
         IScheduleService scheduleService = new SpanDiagramScheduleService<>();
 
-        Tournament t4 = scheduleService.schedule(new String[]{"a", "b", "c", "d"});
+        Fixtures t4 = scheduleService.schedule(new String[]{"a", "b", "c", "d"});
         System.out.println(t4);
 
-        Tournament t3 = scheduleService.schedule(new String[]{"a", "b", "c"});
+        Fixtures t3 = scheduleService.schedule(new String[]{"a", "b", "c"});
         System.out.println(t3);
 
         String[] s = new String[20];
         for (int i = 0; i < s.length; i++) {
             s[i] = new String(new char[]{(char) ((int)'a' + i)});
         }
-        Tournament t20 = scheduleService.schedule(s);
+        Fixtures t20 = scheduleService.schedule(s);
         System.out.println(t20);
 
     }

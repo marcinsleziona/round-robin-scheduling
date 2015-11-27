@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import pl.ms.rrs.model.Pair;
 import pl.ms.rrs.model.Round;
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 import pl.ms.rrs.services.IScheduleService;
 import pl.ms.rrs.services.StandardScheduleService;
 
@@ -27,7 +27,7 @@ public class StandardScheduleServiceTest {
         String[] teams = {"a", "b"};
 
         //when
-        Tournament t = scheduleService.schedule(teams);
+        Fixtures t = scheduleService.schedule(teams);
         System.out.println(t);
 
         //then
@@ -50,7 +50,7 @@ public class StandardScheduleServiceTest {
         String[] teams = {"a", "b", "c"};
 
         //when
-        Tournament t = scheduleService.schedule(teams);
+        Fixtures t = scheduleService.schedule(teams);
         System.out.println(t);
 
         //then
@@ -95,7 +95,7 @@ public class StandardScheduleServiceTest {
         String[] teams = {"a", "b", "c", "d", "e", "f"};
 
         //when
-        Tournament t = scheduleService.schedule(teams);
+        Fixtures t = scheduleService.schedule(teams);
         System.out.println(t);
 
         //then
