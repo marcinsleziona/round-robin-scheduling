@@ -4,7 +4,7 @@
 
     <groupId>pl.ms.round-robin-scheduling</groupId>
     <artifactId>round-robin-scheduling</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <developers>
         <developer>
