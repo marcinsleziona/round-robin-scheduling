@@ -1,7 +1,7 @@
 package pl.ms.rrs.services;
 
 import pl.ms.rrs.model.Round;
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 
 import java.lang.reflect.Array;
 
@@ -18,8 +18,8 @@ public class SpanDiagramScheduleService<T> implements IScheduleService<T> {
      * Round Robin Schedule Span Diagram, taken from https://en.wikipedia.org/wiki/Round-robin_tournament#cite_note-17
      */
     @Override
-    public Tournament schedule(T[] elements) {
-        Tournament t = Tournament.empty();
+    public Fixtures schedule(T[] elements) {
+        Fixtures t = Fixtures.empty();
         if (elements == null) {
             return t;
         }

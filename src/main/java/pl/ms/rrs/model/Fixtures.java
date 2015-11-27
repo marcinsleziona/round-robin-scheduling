@@ -9,16 +9,16 @@ import java.util.Map;
 /**
  * Created by Marcin on 2015-09-18.
  */
-public class Tournament {
+public class Fixtures {
 
     private Map<Integer, Round> roundMap;
 
-    private Tournament() {
+    private Fixtures() {
         roundMap = new LinkedHashMap<>();
     }
 
-    public static Tournament empty() {
-        return new Tournament();
+    public static Fixtures empty() {
+        return new Fixtures();
     }
 
     public Round getRound(Integer roundId) {

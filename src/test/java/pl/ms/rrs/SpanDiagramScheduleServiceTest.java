@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import pl.ms.rrs.model.Pair;
 import pl.ms.rrs.model.Round;
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 import pl.ms.rrs.services.IScheduleService;
 import pl.ms.rrs.services.SpanDiagramScheduleService;
 
@@ -27,7 +27,7 @@ public class SpanDiagramScheduleServiceTest {
         String[] teams = {"1", "2", "3", "4", "5", "6"};
 
         //when
-        Tournament t = scheduleService.schedule(teams);
+        Fixtures t = scheduleService.schedule(teams);
         System.out.println(t);
 
         //then

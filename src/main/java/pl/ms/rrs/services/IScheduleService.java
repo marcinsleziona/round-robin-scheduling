@@ -1,12 +1,12 @@
 package pl.ms.rrs.services;
 
-import pl.ms.rrs.model.Tournament;
+import pl.ms.rrs.model.Fixtures;
 
 /**
  * Created by Marcin on 2015-09-18.
  */
 public interface IScheduleService<T> {
 
-    Tournament schedule(T[] elements);
+    Fixtures schedule(T[] elements);
 
 }
